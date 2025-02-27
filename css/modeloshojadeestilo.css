@@ -1,0 +1,424 @@
+@charset "utf-8";
+* {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #123E10;
+    font-size: 25px;
+    text-align: left;
+}
+
+#contenedor {
+    width: 100%;
+    background-color: #000000;
+}
+
+header {
+    width: 100%;
+    background-color: #000000;
+    color: white;
+    padding-top: 40px;
+    padding-right: 40px;
+    padding-left: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@font-face {
+    font-family: porschefont;
+    src: url("../fonts/porschefont.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#banner {
+    font-size: 55px;
+    text-align: center;
+    font-family: 'porschefont', sans-serif;
+}
+
+nav {
+    width: 100%;
+    height: 40px;
+    background-color: #FFFFFF;
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    border-radius: 25px;
+}
+
+nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav li {
+    line-height: 30px;
+    padding-top: 4px;
+    padding-bottom: 2px;
+}
+
+nav a {
+    font-size: 16px;
+    text-decoration: none;
+    color: #000000;
+    font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+}
+
+nav a:hover {
+    background-color: #007bff;
+    color: #FFFFFF;
+    border-radius: 10px;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+#modelos-container {
+    width: 100%;
+    overflow-x: auto;
+    position: relative;
+    background-color: #000;
+}
+
+.modelos-wrapper {
+    display: flex;
+    transition: transform 0.3s ease;
+}
+
+.modelo {
+    width: 100%;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.modelo img {
+    width: 80%;
+    height: auto;
+    margin-bottom: 5px;
+    object-fit: cover;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.modelo .texto {
+    color: #333;
+    word-wrap: break-word;
+    font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    max-width: 80%;
+    margin: 0 auto;
+    text-align: justify;
+}
+
+.modelo h2 {
+    margin-bottom: 10px;
+}
+
+.flecha {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.flecha-izquierda {
+    left: 0;
+}
+
+.flecha-derecha {
+    right: 0;
+}
+
+@font-face {
+    font-family: porschefont;
+    src: url("../fonts/porschefont.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+#detalles-modelo {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+}
+
+.detalle {
+    text-align: center;
+    width: 23%;
+}
+
+.detalle h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333;
+    font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;	
+}
+
+.detalle p {
+    font-size: 16px;
+    color: #121212;
+    line-height: 1.6;
+    font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+}
+#nuevo-contenido {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    background-color: #f4f4f4; /* O el color que prefieras */
+}
+
+.imagen-nuevo-contenido {
+    width: 40%; /* Ajusta el ancho según sea necesario */
+    margin-right: 20px;
+}
+
+.imagen-nuevo-contenido img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.texto-nuevo-contenido {
+    width: 50%; /* Ajusta el ancho según sea necesario */
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+}
+
+.texto-nuevo-contenido h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+}
+
+.texto-nuevo-contenido p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+}
+
+.boton-nuevo-contenido {
+    display: inline-block;
+    padding: 2px 4px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+	font-size:16px;
+    
+}
+
+.boton-nuevo-contenido:hover {
+    background-color: #0056b3;
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+	width: 69px;
+    height: 28px;
+	
+}
+
+footer {
+    width: 100%;
+    height: auto;
+    background-color: #222222;
+    color: #FFFFFF;
+    font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+    padding: 20px;
+    text-align: center;
+    font-size: 16px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+
+#container-sections {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 20px;
+    background-color: white;
+    margin-left: 0px;
+}
+
+#contacto {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-family: sans-serif;
+    border-radius: 10px;
+}
+
+#contacto h2 {
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+#contacto p {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+#contacto button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#newsletter {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-family: sans-serif;
+}
+
+#newsletter-content {
+    margin-left: 20px;
+}
+
+#newsletter h2 {
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+#newsletter p {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+#newsletter button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#redes-sociales {
+    background-color: #fff;
+    color: #000;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    width: 33.33%;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    float: left;
+    margin-bottom: 10px;
+}
+
+#redes-sociales h2 {
+    margin-bottom: 3px;
+    font-weight: bold;
+    font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+    font-size: 15px;	
+}
+
+#redes-sociales p {
+    margin-bottom: 20px;
+    font-size: 14px;
+    max-width: 100%;
+    font-weight: normal;
+    font-family: sans-serif;
+    margin-top: 3px;
+    float: left;
+}
+
+.iconos {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 10px;
+}
+
+.iconos a {
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    background-background-color: #000;
+    transition: transform 0.3s ease;
+}
+
+.iconos a:hover {
+    transform: scale(1.1);
+}
+
+.iconos img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: invert(100%);
+}
+
+.bottom-footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px 40px;
+    text-align: center;
+    font-size: 12px;
+}
+
+.bottom-footer .footer-links {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.bottom-footer .footer-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 5px 10px;
+}
+
+.bottom-footer .footer-copyright {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.bottom-footer .footer-copyright p {
+    margin: 5px 0;
+}
+
+.bottom-footer .footer-copyright .footer-logo-text {
+    font-family: 'porschefont', sans-serif;
+    font-size: 24px;
+    color: #fff;
+    margin: 5px 0;
+}

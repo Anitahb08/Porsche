@@ -1,0 +1,417 @@
+@charset "utf-8";
+* {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 15px;
+    text-align: left;
+    overflow-x: hidden;
+    font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+    color: #FFFFFF;
+}
+
+#contenedor {
+    width: 100%;
+    background-color: #000000;
+}
+
+header {
+    width: 100%;
+    background-color: #000000;
+    color: white;
+    padding-top: 40px;
+    padding-right: 40px;
+    padding-left: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@font-face {
+    font-family: porschefont;
+    src: url("../fonts/porschefont.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#banner {
+    font-size: 55px;
+    text-align: center;
+    font-family: 'porschefont', sans-serif;
+}
+
+nav {
+    width: 100%;
+    height: 40px;
+    background-color: #FFFFFF;
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    border-radius: 25px;
+}
+
+nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav li {
+    line-height: 30px;
+    padding-top: 4px;
+    padding-bottom: 2px;
+}
+
+nav a {
+    font-size: 16px;
+    text-decoration: none;
+    color: #000000;
+    font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+}
+
+nav a:hover {
+    background-color: #007bff;
+    color: #FFFFFF;
+    border-radius: 10px;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+
+.historia-inicio {
+    background-image: url("../fotos/historiaporsche/fondoporsche.jpg");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 200px 20px;
+    font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+}
+
+.historia-inicio .contenido {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    display: inline-block;
+    border-radius: 25px;
+    font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+    font-size: 16px;
+    text-align: center; /* Centra el texto */
+}
+
+#historia-porsche {
+    background-color: white; /* Fondo blanco */
+    padding: 20px;
+}
+
+#historia-porsche h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+    color: #000000;
+    font-size: 14px;
+}
+
+#momentos-clave, #innovacion-constante {
+    margin-bottom: 30px;
+}
+
+#momentos-clave h3, #innovacion-constante h3 {
+    text-align: center;
+    margin-bottom: 20px;
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+	color: #000000;
+    font-size: 14px;
+}
+
+.tarjeta {
+    display: inline-block;
+    width: 48%; /* Ajusta el ancho según sea necesario */
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 20px;
+    box-sizing: border-box;
+    vertical-align: top;
+}
+
+.tarjeta img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.tarjeta h4 {
+    margin-bottom: 10px;
+}
+.tarjeta p {
+    color:#000000; /* Cambia el color del párrafo a azul */
+}
+
+/* Media query para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .tarjeta {
+        width: 100%; /* Las tarjetas ocupan todo el ancho en pantallas pequeñas */
+    }
+}
+footer {
+    width: 100%;
+    background-color: #FFFFFF;
+    color: #000000;
+    font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+    padding: 20px;
+    font-size: 12px;
+}
+
+.carousel-container {
+    overflow-x: auto;
+    width: 100%;
+    display: inline-flex;
+}
+
+.carousel-item {
+    display: flex;
+    align-items: flex-start;
+    margin-right: 20px;
+}
+
+.carousel-item img {
+    max-width: 500px;
+    height: auto;
+    object-fit: contain;
+    margin-right: 10px;
+}
+
+.texto-footer {
+    width: 300px;
+    word-wrap: break-word;
+    text-align: justify;
+    font-size: 14px;
+    padding-top: 100px;
+}
+  #detalles-modelo {
+    gap: 10px; /* Agrega un espacio entre los botones */
+   
+}
+
+.boton {
+    text-decoration: none;
+}
+
+.imagen-contenedor {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.imagen-contenedor img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.titulo-imagen {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    z-index: 1;
+    transition: opacity 0.3s ease;
+    font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+}
+
+.imagen-contenedor:hover img {
+    transform: scale(1.1);
+    filter: blur(3px);
+}
+
+.imagen-contenedor:hover .titulo-imagen {
+    opacity: 1;
+}
+
+
+#container-sections {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px;
+    background-color: white;
+    margin-left: 10px;
+    gap: 40px;
+}
+
+#contacto {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-family: sans-serif;
+}
+
+#contacto h2 {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #000000;	
+}
+
+#contacto p {
+    font-size: 13px;
+    margin-bottom: 20px;
+	color: #000000;
+}
+
+#contacto button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    font-size: 11px;
+    cursor: pointer;
+}
+
+#newsletter {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-family: sans-serif;
+    border-radius: 10px;
+}
+
+#newsletter-content {
+    margin-left: 20px;
+}
+
+#newsletter h2 {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #000000;	
+}
+
+#newsletter p {
+    font-size: 13px;
+    margin-bottom: 20px;
+	color: #000000;
+}
+
+#newsletter button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+#redes-sociales {
+    background-color: #fff;
+    color: #000;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    width: 33.33%;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    float: left;
+    margin-bottom: 15px;
+}
+
+#redes-sociales h2 {
+    margin-bottom: 3px;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+#redes-sociales p {
+    margin-bottom: 20px;
+    font-size: 13px;
+    max-width: 100%;
+    font-weight: normal;
+    font-family: sans-serif;
+    margin-top: 3px;
+    float: left;
+}
+
+.iconos {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 10px;
+}
+
+.iconos a {
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: #000;
+    transition: transform 0.3s ease;
+}
+
+.iconos a:hover {
+    transform: scale(1.1);
+}
+
+.iconos img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: invert(100%);
+}
+
+/* Estilos para el nuevo footer */
+.bottom-footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px 40px; /* Añadido padding horizontal para centrar mejor el contenido */
+    text-align: center;
+    font-size: 12px; /* Establecido el tamaño de fuente base */
+}
+
+.bottom-footer .footer-links {
+    margin-bottom: 20px;
+    display: flex; /* Usamos flexbox para alinear los enlaces */
+    justify-content: center; /* Centramos los enlaces horizontalmente */
+    flex-wrap: wrap; /* Permitimos que los enlaces se envuelvan si no caben */
+}
+
+.bottom-footer .footer-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 5px 10px; /* Ajustamos el margen para mejor espaciado */
+}
+
+.bottom-footer .footer-copyright {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Permitimos que el contenido se envuelva si no cabe */
+}
+
+.bottom-footer .footer-copyright p {
+    margin: 5px 0; /* Añadimos un pequeño margen vertical */
+}
+
+.bottom-footer .footer-copyright .footer-logo-text {
+    font-family: 'porschefont', sans-serif;
+    font-size: 24px;
+    color: #fff;
+    margin: 5px 0; /* Añadimos un pequeño margen vertical */
+}
